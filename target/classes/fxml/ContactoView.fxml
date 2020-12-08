@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="view" maxHeight="1.7976931348623157E308" prefHeight="640.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane collapsible="false" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" text="Teléfonos">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <content>
+            <BorderPane maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <right>
+                  <VBox prefHeight="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickAddTelefono" text="Añadir" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickRemoveTelefono" text="Eliminar" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+               </right>
+               <center>
+                  <TableView fx:id="tvTelefonos" editable="true" maxWidth="1.7976931348623157E308" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="tcNumero" minWidth="50.0" prefWidth="100.0" text="Número" />
+                      <TableColumn fx:id="tcTipo" prefWidth="100.0" text="Tipo" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </content>
+      </TitledPane>
+      <Separator prefHeight="10.0" prefWidth="200.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Separator>
+      <TitledPane collapsible="false" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" text="Direcciones de correo">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <content>
+            <BorderPane maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <right>
+                  <VBox prefHeight="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickAddCorreo" text="Añadir" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickRemoveCorreo" text="Eliminar" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+               </right>
+               <center>
+                  <TableView fx:id="tvCorreo" editable="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="tcEmail" minWidth="50.0" prefWidth="225.0" text="E-mail" />
+                     </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </content>
+      </TitledPane>
+      <Separator layoutX="10.0" layoutY="210.0" prefHeight="10.0" prefWidth="200.0" />
+      <TitledPane collapsible="false" layoutX="10.0" layoutY="220.0" prefHeight="200.0" prefWidth="200.0" text="Webs">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <content>
+            <BorderPane maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <right>
+                  <VBox prefHeight="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickAddWeb" text="Añadir" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickRemoveWeb" text="Eliminar" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+               </right>
+               <center>
+                  <TableView fx:id="tvWeb" editable="true" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="tcURL" minWidth="50.0" prefWidth="225.0" text="URL" />
+                     </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </content>
+      </TitledPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>
